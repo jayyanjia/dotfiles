@@ -1,7 +1,8 @@
 {
-  "workbench.colorTheme": "Predawn",
-  "workbench.iconTheme": "ayu",
-  "editor.fontFamily": "Source Code Pro",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
   "debug.console.fontFamily": "Source Code Pro",
   "editor.fontWeight": "500",
   "terminal.integrated.fontWeight": "600",
