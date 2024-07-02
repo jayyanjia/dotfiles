@@ -21,6 +21,12 @@ tell application "System Events"
 end tell
 EOF
 
+# Disable scroll direction: natural
+defaults write -g com.apple.swipescrolldirection -bool false
+
+# Set to dark mode
+defaults write -g AppleInterfaceStyle Dark
+
 # AppleScript command to set the desktop background
 # tell application "System Events"
 #     set desktopCount to count of desktops
