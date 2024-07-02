@@ -30,13 +30,7 @@ brew cleanup
 # Define an array of packages to install using Homebrew.
 packages=(
     "python"
-    "bash"
-    "zsh"
-    "git"
-    "tree"
-    "pylint"
-    "black"
-    "node"
+    "pyenv"
 )
 
 # Loop over the array to install each application.
@@ -77,17 +71,10 @@ $(brew --prefix)/bin/npm install --global prettier
 apps=(
     "google-chrome"
     "firefox"
-    "brave-browser"
-    "sublime-text"
     "visual-studio-code"
-    "virtualbox"
-    "spotify"
-    "discord"
-    "google-drive"
-    "gimp"
     "vlc"
     "rectangle"
-    "postman"
+    "iterm2"
 )
 
 # Loop over the array to install each application.
@@ -100,12 +87,12 @@ for app in "${apps[@]}"; do
     fi
 done
 
-# Install Source Code Pro Font
+# Install Custom Font
 # Tap the Homebrew font cask repository if not already tapped
 brew tap | grep -q "^homebrew/cask-fonts$" || brew tap homebrew/cask-fonts
 
 # Define the font name
-font_name="font-source-code-pro"
+font_name="font-fira-code"
 
 # Check if the font is already installed
 if brew list --cask | grep -q "^$font_name\$"; then
@@ -129,12 +116,6 @@ brew upgrade --cask
 brew cleanup
 
 echo "Sign in to Google Chrome. Press enter to continue..."
-read
-
-echo "Sign in to Spotify. Press enter to continue..."
-read
-
-echo "Sign in to Discord. Press enter to continue..."
 read
 
 echo "Open Rectangle and give it necessary permissions. Press enter to continue..."
