@@ -12,7 +12,7 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false && kill
 # Get the absolute path to the image
 IMAGE_PATH="${HOME}/dotfiles/settings/Desktop.png"
 
-# AppleScript command to set the desktop background
+# AppleScript command to change to dark mode
 osascript <<EOF
 tell application "System Events"
     tell appearance preferences
@@ -21,6 +21,7 @@ tell application "System Events"
 end tell
 EOF
 
+# AppleScript command to set the desktop background
 # tell application "System Events"
 #     set desktopCount to count of desktops
 #     repeat with desktopNumber from 1 to desktopCount
